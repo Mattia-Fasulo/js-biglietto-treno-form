@@ -1,0 +1,38 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: #a2ffeb;
+}
+
+.trip-data {
+  text-shadow: 0 0 2px black, 0 0 2px black;
+  color: white;
+  background-color: #2bb5b3;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px black;
+}
+
+input,
+select {
+  height: 29px;
+  border-radius: 20px;
+}
+
+.btn.btn-primary {
+  color: gray;
+  background-color: white;
+  border-color: black;
+}
+
+.btn.btn-primary:hover {
+  background-color: #afb5a8;
+  color: white;
+}
