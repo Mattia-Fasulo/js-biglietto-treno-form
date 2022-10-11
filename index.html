@@ -25,7 +25,7 @@
     <div class="container">
 
         <div class="trip-data my-3">
-            <h1 class="fs-1 text-center text-uppercase my-3 fw-bolder">Calcola il prezzo del tuo biglietto</h1>
+            <h2 class="fs-1 text-center text-uppercase my-3 fw-bolder">Calcola il prezzo del tuo biglietto</h2>
             <div class="row justify-content-around">
                 <div class="col-3 d-flex flex-column text-center">
                     <label class="fs-4 my-1" for="name">Nome Cognome</label>
@@ -38,20 +38,51 @@
                 </div>
 
                 <div class="col-3 d-flex flex-column text-center">
-                    <label class="fs-4 my-1" for="fascia-eta">Et&agrave;</label>
-                    <select id="fascia-eta" class="text-center" name="eta">
-                        <option value="minorenne">Minorenne</option>
-                        <option value="maggiorenne">Maggiorenne</option>
+                    <label class="fs-4 my-1" for="eta-utente">Et&agrave;</label>
+                    <select id="eta-utente" class="text-center" name="eta">
+                        <option value="under18">Under 18</option>
+                        <option value="over18">Over 18</option>
                         <option value="over65">Over 65</option>
                     </select>
                 </div>
 
                 <div class="col-12 d-flex justify-content-center g-4">
-                    <button class="btn btn-primary mx-2" id="bottone" type="button" name="button">Genera</button>
+                    <button class="btn btn-primary mx-2" id="calcola" type="button" name="button">Calcola</button>
                     <button class="btn btn-primary mx-2" id="annulla" type="button" name="annulla">Annulla</button>
                 </div>
             </div>
 
+        </div>
+        <div id="biglietto-utente" class="ticket d-none">
+            <h2 class="fs-1 text-center text-uppercase my-3 fw-bolder">Il tuo biglietto</h2>
+            <div id="biglietto">
+                <div class="dati row justify-content-between">
+                    <div class="nome col-4">
+                        <h3 class="my-1">Nome Passeggero</h3>
+                        <h3 id="nome-passeggero"></h3>
+                    </div>
+                    <div class="offerta col align-items-center">
+                        <table class="table table-borderless text-white text-center">
+                            <thead>
+                                <tr>
+                                    <th class="fs-5">Offerta</th>
+                                    <th class="fs-5">Carrozza</th>
+                                    <th class="fs-5">Codice CP</th>
+                                    <th class="fs-5">Costo biglietto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span id="offerta-applicata"></span></td>
+                                    <td><span id="carrozza"></span></td>
+                                    <td><span id="codice-cp"></span></td>
+                                    <td><span id="costo"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
